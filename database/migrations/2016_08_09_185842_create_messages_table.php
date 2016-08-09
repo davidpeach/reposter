@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -20,7 +21,7 @@ class CreateMessagesTable extends Migration
             $table->integer('tries')->default(0);
             $table->text('response')->nullable();
             $table->timestamps();
-            $table->timestamp('scheduled_for')->default('0000-00-00 00:00:00');
+            $table->timestamp('scheduled_for')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

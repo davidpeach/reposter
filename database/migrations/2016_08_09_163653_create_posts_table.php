@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -19,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('url');
             $table->string('hashtags')->nullable();
             $table->timestamps();
-            $table->timestamp('published_at')->default('0000-00-00 00:00:00');
+            $table->timestamp('published_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
