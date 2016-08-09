@@ -17,12 +17,18 @@ class MessageScheduler
 
     public function schedule()
     {
-        Message::create([
-            'post_id' => $this->post->id,
-            'scheduled_for' => with( new DetermineCorrectDate)
+        $scheduledFor = with( new DetermineCorrectDate)
                                         ->fromDate($this->post->published_at)
                                         ->withInterval($this->interval)
-                                        ->getScheduledDate(),
+                                        ->getScheduledDate();
+
+        if ($scheduledFor < Carbon::now()) {
+            return;
+        }
+
+        Message::create([
+            'post_id' => $this->post->id,
+            'scheduled_for' => $scheduledFor,
             ]);
     }
 
