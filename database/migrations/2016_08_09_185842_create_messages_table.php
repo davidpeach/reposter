@@ -20,7 +20,7 @@ class CreateMessagesTable extends Migration
             $table->integer('tries')->default(0);
             $table->text('response')->nullable();
             $table->timestamps();
-            $table->timestamp('scheduled_for');
+            $table->timestamp('scheduled_for')->default('0000-00-00 00:00:00');
         });
     }
 

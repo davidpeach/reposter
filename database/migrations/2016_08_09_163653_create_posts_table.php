@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('url');
             $table->string('hashtags')->nullable();
             $table->timestamps();
-            $table->timestamp('published_at');
+            $table->timestamp('published_at')->default('0000-00-00 00:00:00');
         });
     }
 
