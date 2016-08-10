@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Message;
+use Carbon\Carbon;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Messages\MessageScheduler;
@@ -17,7 +18,10 @@ class MessagesController extends Controller
      */
     public function index()
     {
-        $messages = Message::orderBy('scheduled_for', 'asc')->get();
+        $messages = Message::orderBy('scheduled_for', 'asc')
+                            ->whereSent(0)
+                            ->where('scheduled_for', '>', Carbon::now())
+                            ->get();
 
         return view('messages.all', compact('messages'));
     }
