@@ -28,7 +28,7 @@ class MessageSender
 
         try {
 
-            $response = $this->twitter->post($messageText='84yfuh7sdlkfjkjdskfh');
+            $response = $this->twitter->post($messageText);
             $message->response = $response->getBody()->getContents();
             $message->sent = 1;
 
