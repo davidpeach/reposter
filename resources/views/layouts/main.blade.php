@@ -10,7 +10,17 @@
     <body>
         <div class="container">
             <h1>Reposter</h1>
+            <nav class="navbar">
+                <a href="{{ route('messages.index') }}">All Messages</a> |
+                <a href="{{ route('posts.index') }}">All Posts</a> |
+                <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+            </nav>
             @yield('main')
         </div>
+
+
+        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
     </body>
 </html>
