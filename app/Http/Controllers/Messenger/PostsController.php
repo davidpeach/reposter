@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Messenger;
 
 use App\Post;
-use App\Message;
-use Carbon\Carbon;
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Messages\MessageScheduler;
+use App\Posts\PostPublishDate;
+use App\Http\Controllers\Controller;
 
-class MessagesController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +17,7 @@ class MessagesController extends Controller
      */
     public function index()
     {
-        $messages = Message::orderBy('scheduled_for', 'asc')
-                            ->whereSent(0)
-                            ->where('scheduled_for', '>', Carbon::now())
-                            ->get();
-
-        return view('messages.all', compact('messages'));
+        return view('posts.index')->withPosts(Post::all());
     }
 
     /**
@@ -33,7 +27,7 @@ class MessagesController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -44,15 +38,13 @@ class MessagesController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Post::find($request->post_id);
+        $request->merge([
+            'published_at' => PostPublishDate::parse($request->all())
+        ]);
 
-        foreach ($request->intervals as $interval) {
+        Post::create($request->all());
 
-            with( new MessageScheduler($interval))->for($post)->schedule();
-
-        }
-
-        return redirect(route('posts.messages.index', $request->post_id));
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -63,7 +55,7 @@ class MessagesController extends Controller
      */
     public function show($id)
     {
-        //
+        return redirect()->route('posts.messages.index', $id);
     }
 
     /**

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Messenger;
 
 use App\Post;
 use App\Message;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Messages\MessageBuilder;
+use App\Http\Controllers\Controller;
 
 class PostMessagesController extends Controller
 {
