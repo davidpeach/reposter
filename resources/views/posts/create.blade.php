@@ -12,7 +12,7 @@
 
     <div class="form-group">
         <label for="url">The Full URL to schedule for resharing </label>
-        <input class="form-control" type="url" name="url" id="url" placeholder="https://chegalabonga.com/2016/08/09/the-post-slug">
+        <input class="form-control" type="url" name="url" id="url" placeholder="https://davidpeach.co.uk/2016/08/09/the-post-slug">
     </div>
 
     <div class="form-group">

@@ -16,7 +16,7 @@ class PostPublishDate
     {
         $url = trim($url, '/');
 
-        $url = str_replace('https://chegalabonga.com/', '', $url);
+        $url = str_replace('https://davidpeach.co.uk/', '', $url);
 
         $explodedUrl = explode('/', $url);
 
