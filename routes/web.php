@@ -24,7 +24,7 @@ Route::group(['domain' => env('DOMAIN_REPOSTER'), 'namespace' => 'Messenger', 'm
 
 
 
-Route::group(['domain' => env('DOMAIN_QUANTIFIED')], function () {
+Route::group(['domain' => env('DOMAIN_QUANTIFIED'), 'namespace' => 'Quantified'], function () {
 
     Route::get('/', function () {
         return "Quantified";

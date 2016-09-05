@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "edf14305cea5ab757bc4cc9438a74c75",
-    "content-hash": "9cff9cc674a370c9ee683135138c6a96",
+    "hash": "ec51609e46cbe1553f0ac007650ff5ee",
+    "content-hash": "933fa5fe48e7ffb55d36b1883341eaf6",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -60,6 +60,57 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "dandelionmood/lastfm",
+            "version": "v0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dandelionmood/php-lastfm.git",
+                "reference": "923df738a67c3de961ee1b5d3b08a679a280016c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dandelionmood/php-lastfm/zipball/923df738a67c3de961ee1b5d3b08a679a280016c",
+                "reference": "923df738a67c3de961ee1b5d3b08a679a280016c",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/buzz": ">=0.9",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "2.8.0",
+                "phpunit/phpunit": "3.7.18"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Dandelionmood": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Quillery",
+                    "email": "pierre+lastfm@quillery.fr",
+                    "homepage": "http://pierre.quillery.fr/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dead simple wrapper for the Last.fm API.",
+            "homepage": "https://github.com/dandelionmood/php-lastfm",
+            "keywords": [
+                "api",
+                "fm",
+                "last",
+                "last.fm",
+                "wrapper"
+            ],
+            "time": "2015-08-24 17:05:19"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -529,6 +580,54 @@
             "time": "2015-12-05 17:17:57"
         },
         {
+            "name": "kriswallsmith/buzz",
+            "version": "v0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/Buzz.git",
+                "reference": "d4041666c3ffb379af02a92dabe81c904b35fab8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/d4041666c3ffb379af02a92dabe81c904b35fab8",
+                "reference": "d4041666c3ffb379af02a92dabe81c904b35fab8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Buzz": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
+            "keywords": [
+                "curl",
+                "http client"
+            ],
+            "time": "2015-06-25 17:26:56"
+        },
+        {
             "name": "laravel/framework",
             "version": "5.3.x-dev",
             "source": {
@@ -538,7 +637,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3f49a9cd36bcd2feea1661ba977f11c9a5186aa8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/95ac0eb2a82170418ec59d5aff77ff9f9badadc6",
                 "reference": "3f49a9cd36bcd2feea1661ba977f11c9a5186aa8",
                 "shasum": ""
             },

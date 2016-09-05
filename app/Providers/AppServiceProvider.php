@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Core\DomainSniffer;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\ServiceProvider;
 
