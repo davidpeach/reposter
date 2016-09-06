@@ -52,7 +52,7 @@ class ImportSongsListenedTo extends Command
 //dd($lastRetrievedListen, with(Carbon::now())->timestamp);
         $recentListens = $lastfm->user_getRecentTracks([
             'user' => 'david_peach',
-            'limit' => 2,
+            'limit' => 100,
             'from' => $lastRetrievedListen,
             'to' => with(Carbon::now())->timestamp
         ]);
