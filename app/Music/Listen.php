@@ -21,6 +21,6 @@ class Listen extends Model
     		$lastRetrieved = $lastRetrieved->listened_at;
     	}
 
-    	return $lastRetrieved->timestamp;
+    	return $lastRetrieved->timestamp + 1;
     }
 }
