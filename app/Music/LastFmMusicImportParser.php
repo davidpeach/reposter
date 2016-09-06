@@ -32,7 +32,7 @@ class LastFmMusicImportParser
 			if (property_exists($track, '@attr')) {
 				
 				if (property_exists($track->{'@attr'}, 'nowplaying')) {
-					dd('hmm yes.');
+					continue;
 				}
 
 			}
