@@ -49,16 +49,16 @@ class ImportSongsListenedTo extends Command
         $lastfm = new \Dandelionmood\LastFm\LastFm( env('LASTFM_API_KEY'), env('LASTFM_API_SECRET') );
 
         $lastRetrievedListen = Listen::lastRetrieved();
-//dd($lastRetrievedListen, with(Carbon::now())->timestamp);
+
         $recentListens = $lastfm->user_getRecentTracks([
             'user' => 'david_peach',
-            'limit' => 100,
+            'limit' => env('LASTFM_IMPORT_LIMIT'),
             'from' => $lastRetrievedListen,
             'to' => with(Carbon::now())->timestamp
         ]);
 
         $preparedListens = $this->parser->prepare($recentListens);
-dd($preparedListens);
+
         if ($preparedListens) {
             $this->listenSaver->save($preparedListens);
         }
