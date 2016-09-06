@@ -19,13 +19,25 @@ class LastFmMusicImportParser
 			return false;
 		}
 
+		if (empty($response->recenttracks->track)) {
+			return false;
+		}
 		
 		$tracks = collect($response->recenttracks->track);
 
 		$returnData = [];
 
 		foreach ($tracks as $track) {
-						
+			
+			if (property_exists($track, '@attr')) {
+				
+				if (property_exists($track->{'@attr'}, 'nowplaying')) {
+					dd('hmm yes.');
+				}
+
+			}
+			
+
 			$artistName = $track->artist->{'#text'};
 			$songTitle = $track->name;
 			$albumTitle = $track->album->{'#text'};

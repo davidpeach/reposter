@@ -15,7 +15,8 @@ class CreateListensTable extends Migration
     {
         Schema::create('listens', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('song_id')->unsigned()->notNull();
+            $table->integer('song_id')->unsigned();
+            $table->timestamp('listened_at');
             $table->timestamps();
         });
     }

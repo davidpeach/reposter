@@ -3,8 +3,11 @@
 namespace App\Console\Commands\Quantified;
 
 use Cache;
-use App\Music\LastFmMusicImportParser as MusicImportParser;
+use Carbon\Carbon;
+use App\Music\Listen;
+use App\Music\ListenSaver;
 use Illuminate\Console\Command;
+use App\Music\LastFmMusicImportParser as MusicImportParser;
 
 class ImportSongsListenedTo extends Command
 {
@@ -27,11 +30,13 @@ class ImportSongsListenedTo extends Command
      *
      * @return void
      */
-    public function __construct(MusicImportParser $parser)
+    public function __construct(MusicImportParser $parser, ListenSaver $listenSaver)
     {
         parent::__construct();
 
         $this->parser = $parser;
+
+        $this->listenSaver = $listenSaver;
     }
 
     /**
@@ -43,15 +48,21 @@ class ImportSongsListenedTo extends Command
     {
         $lastfm = new \Dandelionmood\LastFm\LastFm( env('LASTFM_API_KEY'), env('LASTFM_API_SECRET') );
 
-        $recentListens = Cache::remember('recentListens', 60, function() use ($lastfm) {
-            return $lastfm->user_getRecentTracks([
-                    'user' => 'david_peach',
-                    'limit' => 2,
-                ]);
-        });
+        $lastRetrievedListen = Listen::lastRetrieved();
+
+        $recentListens = $lastfm->user_getRecentTracks([
+            'user' => 'david_peach',
+            'limit' => env('LASTFM_IMPORT_LIMIT'),
+            'from' => $lastRetrievedListen,
+            'to' => with(Carbon::now())->timestamp
+        ]);
 
         $preparedListens = $this->parser->prepare($recentListens);
 
-        $this->listenSaver->save($preparedListens);
+        if ($preparedListens) {
+            $this->listenSaver->save($preparedListens);
+        }
+
+        return;
     }
 }

@@ -27,6 +27,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('messages:send-next')->everyMinute();
+        
+        $schedule->command('quantified:importmusic')->hourly();
     }
 
     /**

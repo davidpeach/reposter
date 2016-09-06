@@ -15,7 +15,7 @@ class CreateSongsTable extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('album_id')->unsigned()->notNull();
+            $table->integer('album_id')->unsigned();
             $table->string('title');
             $table->timestamps();
         });
