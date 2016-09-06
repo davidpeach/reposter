@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('messages:send-next')->everyMinute();
         
-        $schedule->command('quantified:importmusic')->everyMinute();
+        $schedule->command('quantified:importmusic')->everyThirtyMinutes();
     }
 
     /**
