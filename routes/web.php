@@ -24,13 +24,27 @@ Route::group(['domain' => env('DOMAIN_REPOSTER'), 'namespace' => 'Messenger', 'm
 
 
 
-Route::group(['domain' => env('DOMAIN_QUANTIFIED'), 'namespace' => 'Quantified'], function () {
+//Route::group(['domain' => env('DOMAIN_QUANTIFIED'), 'namespace' => 'Quantified'], function () {
 
-    Route::get('/', function () {
-        return "Quantified";
+    Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {
+    
+        Route::resource('posts', 'PostsController');
+
+        Route::resource('messages', 'MessagesController');
+
+        Route::get('posts/{id}/messages', ['as' => 'posts.messages.index', 'uses' => 'PostMessagesController@index']);
+
+        Route::get('/', function () {
+            return redirect()->route('posts.create');
+        });
+
     });
 
-});
+    Route::get('/', function () {
+        return view('dashboard');
+    });
+
+//});
 
 
 

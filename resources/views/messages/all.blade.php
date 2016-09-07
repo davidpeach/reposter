@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.dashboard')
 
 @section('main')
     <h2>All Scheduled Messages</h2>

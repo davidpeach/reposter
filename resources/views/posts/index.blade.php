@@ -1,8 +1,20 @@
-@extends('layouts.main')
+@extends('layouts.dashboard')
+
+@section('title')
+    All Posts
+@stop
+
+@section('subtitle')
+    Blog posts that should be retweeted
+@stop
+
+@section('breadcrump')
+    <li><a href="/messenger/">Messenger</a></li>
+    <li class="active">Posts</li>
+@stop
 
 @section('main')
 
-<h2>All Posts</h2>
 
 <table class="table">
     <thead>
