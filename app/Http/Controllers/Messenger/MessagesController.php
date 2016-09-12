@@ -34,7 +34,7 @@ class MessagesController extends Controller
      */
     public function create()
     {
-        //
+        return view('messages.create');
     }
 
     /**
@@ -47,15 +47,34 @@ class MessagesController extends Controller
     {
         $post = Post::find($request->post_id);
 
+        if (is_null($post)) {
+
+            $post = new Post;
+            $post->id = 0;
+
+            $request->merge([
+                'published_at' => new Carbon::createFromFormat('Y-m-d H:i:s', $request->published_at);
+                ]);
+
+        }
+
         $post->messages()->delete();
 
         foreach ($request->intervals as $interval) {
 
-            with( new MessageScheduler($interval))->for($post)->schedule();
+            with( new MessageScheduler($interval))->for($post)->schedule($request->published_at);
 
         }
 
         return redirect(route('posts.messages.index', $request->post_id));
+    }
+
+
+    // shouldnt need this
+    public function storeCustomMessage(Request $request)
+    {
+        // make a message content row
+        // make message row linked to the content
     }
 
     /**

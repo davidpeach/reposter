@@ -16,9 +16,9 @@ class MessageScheduler
         $this->interval = $interval;
     }
 
-    public function schedule()
+    public function schedule(Carbon $scheduledFor = null)
     {
-        $scheduledFor = with( new DetermineCorrectDate)
+        $scheduledFor = $scheduledFor ?? with( new DetermineCorrectDate)
                                         ->fromDate($this->post->published_at)
                                         ->withInterval($this->interval)
                                         ->getScheduledDate();
