@@ -3,6 +3,7 @@
 namespace App\Music;
 
 use Carbon\Carbon;
+use App\Music\Song;
 use Illuminate\Database\Eloquent\Model;
 
 class Listen extends Model
@@ -22,5 +23,10 @@ class Listen extends Model
     	}
 
     	return $lastRetrieved->timestamp + 1;
+    }
+
+    public function song()
+    {
+        return $this->belongsTo(Song::class);
     }
 }

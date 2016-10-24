@@ -11,8 +11,8 @@ class ListensController extends Controller
 {
     public function index()
     {
-        // Set up model relations
-        // Display a paginated list of Listens.
-        // Then maybe play with datatables.
+        $listens = Listen::with('song.album.artist')->orderBy('listened_at', 'desc')->paginate(env('PAGINATION_POSTS_PER_PAGE', 5));
+
+        return view('listens.index', compact('listens'));
     }
 }
