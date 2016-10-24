@@ -21,4 +21,10 @@ class Post extends Model
     {
         return $this->hasMany(Message::class);
     }
+
+
+    public function unsentMessages()
+    {
+        return $this->messages()->where('sent', 0)->get();
+    }
 }

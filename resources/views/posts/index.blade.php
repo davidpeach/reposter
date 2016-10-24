@@ -31,7 +31,7 @@
             <td>{{ $post->title }}</td>
             <td>{{ $post->url }}</td>
             <td>{{ $post->published_at }}</td>
-            <td><a href="{{ route('posts.messages.index', $post->id) }}">??</a></td>
+            <td><a href="{{ route('posts.messages.index', $post->id) }}">{{ $post->unsentMessages()->count() }} / {{ $post->messages()->count() }}</a></td>
         </tr>
         @endforeach
     </tbody>
