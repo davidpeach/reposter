@@ -54,6 +54,8 @@
 
       <ul class="sidebar-menu">
         <li class="header">QUANTIFIED</li>
+
+
         <li class="header">Listening History</li>
 
         <li>
@@ -61,6 +63,16 @@
             <i class="fa fa-th"></i> <span>Listens</span>
           </a>
         </li>
+
+
+        <li class="header">Location History</li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-th"></i> <span>Coming Soon</span>
+          </a>
+        </li>
+
 
       </ul>
     </section>
