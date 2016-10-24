@@ -53,7 +53,7 @@ class MessagesController extends Controller
             $post->id = 0;
 
             $request->merge([
-                'published_at' => new Carbon::createFromFormat('Y-m-d H:i:s', $request->published_at);
+                'published_at' => Carbon::createFromFormat('Y-m-d H:i:s', $request->published_at)
                 ]);
 
         }
