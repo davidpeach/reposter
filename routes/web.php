@@ -1,27 +1,14 @@
 <?php
 
-/**
- * All Routes for the Reposter / Messenger site
- */
-// Route::group(['domain' => env('DOMAIN_REPOSTER'), 'namespace' => 'Messenger', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
 
-//     Route::resource('posts', 'PostsController');
+    Route::get('/', function() {
+        return 'Quantified root.';
+    });
 
-//     Route::resource('messages', 'MessagesController');
+    Route::resource('listens', 'ListensController');
 
-//     Route::get('posts/{id}/messages', ['as' => 'posts.messages.index', 'uses' => 'PostMessagesController@index']);
-
-//     Route::get('/', function () {
-//         return redirect()->route('posts.create');
-//     });
-
-// });
-
-
-
-
-
-
+});
 
 
 Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {

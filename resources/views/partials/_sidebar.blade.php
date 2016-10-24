@@ -50,8 +50,18 @@
             <i class="fa fa-th"></i> <span>Add Custom Message</span>
           </a>
         </li>
+      </ul>
 
-        
+      <ul class="sidebar-menu">
+        <li class="header">QUANTIFIED</li>
+        <li class="header">Listening History</li>
+
+        <li>
+          <a href="{{ route('listens.index') }}">
+            <i class="fa fa-th"></i> <span>Listens</span>
+          </a>
+        </li>
+
       </ul>
     </section>
     <!-- /.sidebar -->
