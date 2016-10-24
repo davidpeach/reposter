@@ -17,7 +17,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.index')->withPosts(Post::all());
+        return view('posts.index')->withPosts(Post::paginate(env('PAGINATION_POSTS_PER_PAGE', 2)));
     }
 
     /**

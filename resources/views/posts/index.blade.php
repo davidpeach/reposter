@@ -15,26 +15,37 @@
 
 @section('main')
 
+<div class="box box-success">
+    <div class="box-header">
+        {!! $posts->render() !!}
+    </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>URL</th>
-            <th>Published At</th>
-            <th>Upcoming Schedule</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($posts as $post)
-        <tr>
-            <td>{{ $post->title }}</td>
-            <td>{{ $post->url }}</td>
-            <td>{{ $post->published_at }}</td>
-            <td><a href="{{ route('posts.messages.index', $post->id) }}">{{ $post->unsentMessages()->count() }} / {{ $post->messages()->count() }}</a></td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Published At</th>
+                    <th>Upcoming Schedule</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($posts as $post)
+                <tr>
+                    <td>{{ $post->title }}</td>
+                    <td>{{ $post->url }}</td>
+                    <td>{{ $post->published_at }}</td>
+                    <td><a href="{{ route('posts.messages.index', $post->id) }}">{{ $post->unsentMessages()->count() }} / {{ $post->messages()->count() }}</a></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box-footer">
+        {!! $posts->render() !!}
+    </div>
+</div>
 
 @stop

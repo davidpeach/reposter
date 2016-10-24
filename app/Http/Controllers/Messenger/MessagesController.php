@@ -22,7 +22,7 @@ class MessagesController extends Controller
         $messages = Message::orderBy('scheduled_for', 'asc')
                             ->whereSent(0)
                             ->where('scheduled_for', '>', Carbon::now())
-                            ->get();
+                            ->paginate(env('PAGINATION_POSTS_PER_PAGE', 2));
 
         return view('messages.all', compact('messages'));
     }
