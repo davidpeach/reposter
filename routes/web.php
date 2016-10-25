@@ -46,13 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-Route::post('checkin', function () {
-
-    Log::info('recieved a checkin', request()->all());
-
-});
-
-
+Route::post('checkin', 'Quantified\CheckinsController@store');
 
 Auth::routes();
 
