@@ -4,6 +4,7 @@ namespace App\Http\ViewComposers;
 
 use App\Message;
 use App\Music\Listen;
+use App\Checkins\Checkin;
 use Illuminate\Contracts\View\View;
 
 class InfoBoxesViewComposer
@@ -20,6 +21,8 @@ class InfoBoxesViewComposer
 
         $messageCount = Message::whereSent(0)->count();
 
-        $view->with(compact('listenCount', 'messageCount'));
+        $checkinCount = Checkin::count();
+
+        $view->with(compact('listenCount', 'messageCount', 'checkinCount'));
     }
 }
