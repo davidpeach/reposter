@@ -32,8 +32,6 @@ class CheckinsController extends Controller
         $checkin->timestamp = Carbon::createFromTimestamp($data->createdAt);
         $checkin->location_id = $location->id;
         $checkin->save();
-
-        return response()->setStatusCode(200);
     }
 
 }
