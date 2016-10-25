@@ -1,37 +1,39 @@
 <?php
 
-Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
+Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/', function() {
-        return 'Quantified root.';
+    Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
+
+        Route::get('/', function() {
+            return 'Quantified root.';
+        });
+
+        Route::resource('listens', 'ListensController');
+
     });
 
-    Route::resource('listens', 'ListensController');
 
-});
+    Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {
 
+        Route::resource('posts', 'PostsController');
 
-Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {
+        Route::resource('messages', 'MessagesController');
 
-    Route::resource('posts', 'PostsController');
+        Route::post('storeCustomMessage', ['as' => 'messages.storeCustomMessage', 'uses' => 'MessagesController@storeCustomMessage']);
 
-    Route::resource('messages', 'MessagesController');
+        Route::get('posts/{id}/messages', ['as' => 'posts.messages.index', 'uses' => 'PostMessagesController@index']);
 
-    Route::post('storeCustomMessage', ['as' => 'messages.storeCustomMessage', 'uses' => 'MessagesController@storeCustomMessage']);
+        Route::get('/', function () {
+            return redirect()->route('posts.create');
+        });
 
-    Route::get('posts/{id}/messages', ['as' => 'posts.messages.index', 'uses' => 'PostMessagesController@index']);
+    });
 
     Route::get('/', function () {
-        return redirect()->route('posts.create');
+        return view('dashboard');
     });
 
 });
-
-Route::get('/', function () {
-    return view('dashboard');
-});
-
-
 
 
 
