@@ -33,6 +33,17 @@ Route::group(['middleware' => 'auth'], function () {
         return view('dashboard');
     });
 
+    Route::get('mailtest', function () {
+
+        Mail::send('emails.daily-summary', [], function ($m) {
+            $m->from('hello@app.com', 'Your Application');
+
+            $m->to('mail@davidpeach.co.uk', 'Davidov')->subject('Your Reminder TESTTTTT moose');
+        });
+
+    });
+
+
 });
 
 
