@@ -46,26 +46,13 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+Route::post('checkin', function () {
 
-
-
-
-
-/**
- * All Routes for the Music tracker site
- */
-Route::group(['domain' => env('DOMAIN_MUSIC_TRACKER')], function () {
-
-    Route::get('/', function(){
-        return "test works";
-    });
-
-
-    Route::group(['middleware' => 'auth'], function () {
-        //
-    });
+    Log::info('recieved a checkin', request()->all());
 
 });
+
+
 
 Auth::routes();
 
