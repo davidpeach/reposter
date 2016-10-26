@@ -17,12 +17,17 @@ class TwitterPublisher
         return $this->client->post($this->getMakeTweetUrl($messageText));
     }
 
-    public function retrieve()
+    public function retrieveTweets()
     {
-        $response = $this->client->get($this->getTweetsRetrievalUrl());
-
-        dd($response->getBody()->getContents());
+        return $this->client->get($this->getTweetsRetrievalUrl());
     }
+
+
+
+
+
+
+
 
     private function getMakeTweetUrl($status)
     {
@@ -33,8 +38,15 @@ class TwitterPublisher
     {
         return 'https://api.twitter.com/1.1/statuses/user_timeline.json?
                     screen_name=chegalabonga
-                    &count=5
+                    &count=2000
                     &include_rts=true
-                    &since_id=1';
+                    &exclude_replies=false';
+    }
+
+    protected function getFavouritesRetrievalUrl()
+    {
+        return 'https://api.twitter.com/1.1/favorites/list.json?
+            count=5
+            &screen_name=chegalabonga';
     }
 }

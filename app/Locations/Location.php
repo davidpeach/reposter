@@ -11,7 +11,7 @@ class Location extends Model
 
     public function checkins()
     {
-        //return $this->hasMany(Checkin::class);
+        return $this->hasMany(Checkin::class);
     }
 
 

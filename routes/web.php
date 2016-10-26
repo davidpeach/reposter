@@ -43,8 +43,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     });
 
+    Route::get('get-tweets', 'Quantified\TweetsController@index');
 
 });
+
 
 Route::post('checkin', 'Quantified\CheckinsController@store');
 
