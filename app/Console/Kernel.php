@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
+use App\Console\Commands\Quantified\ImportTweets;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\Quantified\ImportSongsListenedTo;
 
@@ -16,6 +17,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\SendMessage::class,
         ImportSongsListenedTo::class,
+        ImportTweets::class,
     ];
 
     /**
@@ -27,7 +29,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('messages:send-next')->everyMinute();
-        
+
         $schedule->command('quantified:importmusic')->everyThirtyMinutes();
     }
 
