@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Checkins;
+namespace App\Locations;
 
 use App\Checkins\Checkin;
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +22,7 @@ class Location extends Model
      */
     public static function existsAndReturn($location)
     {
-        if ( ! $locationFound = self::whereUid($location->id)->first()) {
+        if ( ! $locationFound = self::whereUid($location->id)->orWhere('name', $location->name)->first()) {
 
             $insertData = [
                 'uid' => $location->id,

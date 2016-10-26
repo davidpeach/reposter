@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Quantified;
 use Carbon\Carbon;
 use App\Http\Requests;
 use App\Checkins\Checkin;
-use App\Checkins\Location;
+use App\Locations\Location;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

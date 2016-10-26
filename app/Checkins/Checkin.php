@@ -2,7 +2,7 @@
 
 namespace App\Checkins;
 
-use App\Checkins\Location;
+use App\Locations\Location;
 use Illuminate\Database\Eloquent\Model;
 
 class Checkin extends Model
