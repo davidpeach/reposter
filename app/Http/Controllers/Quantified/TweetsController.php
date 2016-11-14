@@ -10,13 +10,15 @@ use App\Http\Controllers\Controller;
 
 class TweetsController extends Controller
 {
-    public function index(TwitterPublisher $twitter)
+    public function backdated(TwitterPublisher $twitter)
     {
         $tweets = $twitter->retrieveTweets();
 
         try {
 
             $tweets = json_decode($tweets->getBody()->getContents());
+
+            dd($tweets);
 
         } catch (Exception $e) {
 

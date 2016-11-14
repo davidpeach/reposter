@@ -14,12 +14,20 @@ class TweetLocationPersistor extends LocationPersist
 
     public function lat()
     {
-        return $this->locationData->lat;
+        if (property_exists($this->locationData, 'lat')) {
+            return $this->locationData->lat;
+        }
+
+        return null;
     }
 
     public function lng()
     {
-        return $this->locationData->lng;
+        if (property_exists($this->locationData, 'lng')) {
+            return $this->locationData->lng;
+        }
+
+        return null;
     }
 
     public function address()

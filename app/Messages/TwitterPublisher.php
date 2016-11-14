@@ -2,6 +2,7 @@
 
 namespace App\Messages;
 
+use App\Tweets\Tweet;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 
@@ -36,11 +37,25 @@ class TwitterPublisher
 
     protected function getTweetsRetrievalUrl()
     {
-        return 'https://api.twitter.com/1.1/statuses/user_timeline.json?
-                    screen_name=chegalabonga
-                    &count=2000
-                    &include_rts=true
-                    &exclude_replies=false';
+        $tweet = Tweet::orderBy('timestamp', 'asc')->first();
+
+
+
+        $request = [
+            'screen_name' => 'chegalabonga',
+            'count' => '2000',
+            'include_rts' => 'true',
+            'exclude_replies' => 'false'
+        ];
+
+        $request['since_id'] = '796986409857024000';
+
+        // if ( ! is_null($tweet)) {
+        //     $request['max_id'] = $tweet->uid;
+        // }
+
+        return 'https://api.twitter.com/1.1/statuses/user_timeline.json?' .
+                    http_build_query($request);
     }
 
     protected function getFavouritesRetrievalUrl()

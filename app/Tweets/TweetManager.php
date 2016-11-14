@@ -3,6 +3,7 @@
 namespace App\Tweets;
 
 use StdClass;
+use Carbon\Carbon;
 use App\Tweets\Tweet;
 use App\Tweets\TweetContext;
 use App\Locations\LocationPersistors\TweetLocationPersistor;
@@ -24,8 +25,8 @@ class TweetManager
         }
 
         $newTweet->uid = $tweet->id;
-        $newTweet->published_at = $tweet->created_at;
-        $newTweet->content = $tweet->text;
+        $newTweet->timestamp = new Carbon($tweet->created_at);
+        $newTweet->content = utf8_encode($tweet->text);
 
         $newTweet->save();
     }
@@ -52,12 +53,10 @@ class TweetManager
     {
         if ($tweet->in_reply_to_status_id) {
 
-            $context = TweetContext::create([
+            return TweetContext::create([
                 'uid' => $tweet->in_reply_to_status_id,
                 'type' => 'reply',
             ]);
-
-            return $context->id
         }
 
         return false;
