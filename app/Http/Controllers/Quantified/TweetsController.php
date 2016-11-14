@@ -29,7 +29,7 @@ class TweetsController extends Controller
 
             $tweets = json_decode($tweets->getBody()->getContents());
 
-            dd($tweets);
+            //dd($tweets);
 
         } catch (Exception $e) {
 

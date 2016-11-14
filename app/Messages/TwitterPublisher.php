@@ -48,11 +48,11 @@ class TwitterPublisher
             'exclude_replies' => 'false'
         ];
 
-        $request['since_id'] = '796986409857024000';
+        //$request['since_id'] = '796986409857024000';
 
-        // if ( ! is_null($tweet)) {
-        //     $request['max_id'] = $tweet->uid;
-        // }
+        if ( ! is_null($tweet)) {
+            $request['max_id'] = $tweet->uid;
+        }
 
         return 'https://api.twitter.com/1.1/statuses/user_timeline.json?' .
                     http_build_query($request);
