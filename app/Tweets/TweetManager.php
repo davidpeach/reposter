@@ -14,6 +14,10 @@ class TweetManager
     {
         $newTweet = new Tweet;
 
+        if ($this->exists($tweet->id)) {
+            return;
+        }
+
         if ($context = self::handleTweetReplyContext($tweet))
         {
             $newTweet->context_id = $context->id;
@@ -29,6 +33,11 @@ class TweetManager
         $newTweet->content = utf8_encode($tweet->text);
 
         $newTweet->save();
+    }
+
+    public function exists($uid)
+    {
+        return ! is_null(Tweet::whereUid($uid)->first());
     }
 
     public static function handleTweetLocation($tweet)
