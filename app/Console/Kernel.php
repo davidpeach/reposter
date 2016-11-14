@@ -32,7 +32,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('quantified:importmusic')->everyThirtyMinutes();
 
-        $schedule->command('quantified:importTweets')->everyMinute();
+        $schedule->command('quantified:importTweets')->everyTenMinutes();
     }
 
     /**
