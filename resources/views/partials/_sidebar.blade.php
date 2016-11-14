@@ -55,6 +55,13 @@
       <ul class="sidebar-menu">
         <li class="header">QUANTIFIED</li>
 
+        <li class="header">Tweets History</li>
+
+        <li>
+          <a href="{{ route('tweets.index') }}">
+            <i class="fa fa-th"></i> <span>Tweets</span>
+          </a>
+        </li>
 
         <li class="header">Listening History</li>
 
