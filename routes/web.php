@@ -10,6 +10,8 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::resource('listens', 'ListensController');
 
+        Route::resource('tweets', 'TweetsController');
+
     });
 
 

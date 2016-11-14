@@ -12,7 +12,7 @@ class Tweet extends Model
         //
     ];
 
-    protected $dates = ['published_at'];
+    protected $dates = ['timestamp'];
 
     public function setPublishedAtAttribute($date)
     {
