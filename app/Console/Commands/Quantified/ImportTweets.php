@@ -2,8 +2,11 @@
 
 namespace App\Console\Commands\Quantified;
 
+use Exception;
+use App\Tweets\TweetManager;
 use Illuminate\Console\Command;
 use App\Messages\TwitterPublisher;
+use Illuminate\Support\Facades\Log;
 
 class ImportTweets extends Command
 {
@@ -40,6 +43,24 @@ class ImportTweets extends Command
      */
     public function handle()
     {
-        $this->twitter->retrieve();
+        $tweets = $this->twitter->retrieveTweets();
+
+        try {
+
+            $tweets = json_decode($tweets->getBody()->getContents());
+
+        } catch (Exception $e) {
+
+            Log::warning($e->getMessage());
+
+            abort(500);
+
+        }
+
+        foreach ($tweets as $tweet) {
+
+            TweetManager::save($tweet);
+
+        }
     }
 }

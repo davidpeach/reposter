@@ -19,8 +19,6 @@ class TweetsController extends Controller
         return view('tweets.index', compact('tweets'));
     }
 
-
-
     public function backdated(TwitterPublisher $twitter)
     {
         $tweets = $twitter->retrieveTweets();
@@ -28,8 +26,6 @@ class TweetsController extends Controller
         try {
 
             $tweets = json_decode($tweets->getBody()->getContents());
-
-            //dd($tweets);
 
         } catch (Exception $e) {
 

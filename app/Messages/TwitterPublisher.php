@@ -23,13 +23,6 @@ class TwitterPublisher
         return $this->client->get($this->getTweetsRetrievalUrl());
     }
 
-
-
-
-
-
-
-
     private function getMakeTweetUrl($status)
     {
         return 'https://api.twitter.com/1.1/statuses/update.json?' . http_build_query(compact('status'));
@@ -37,9 +30,7 @@ class TwitterPublisher
 
     protected function getTweetsRetrievalUrl()
     {
-        $tweet = Tweet::orderBy('timestamp', 'asc')->first();
-
-
+        $tweet = Tweet::orderBy('timestamp', 'desc')->first();
 
         $request = [
             'screen_name' => 'chegalabonga',
@@ -48,10 +39,8 @@ class TwitterPublisher
             'exclude_replies' => 'false'
         ];
 
-        //$request['since_id'] = '796986409857024000';
-
         if ( ! is_null($tweet)) {
-            $request['max_id'] = $tweet->uid;
+            $request['since_id'] = $tweet->uid;
         }
 
         return 'https://api.twitter.com/1.1/statuses/user_timeline.json?' .
