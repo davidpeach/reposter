@@ -45,8 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     });
 
-    Route::get('get-tweets', 'Quantified\TweetsController@backdated');
-
 });
 
 
