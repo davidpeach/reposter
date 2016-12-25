@@ -14,7 +14,7 @@ class TweetManager
     {
         $newTweet = new Tweet;
 
-        if ($this->exists($tweet->id)) {
+        if (self::exists($tweet->id)) {
             return;
         }
 
@@ -35,7 +35,7 @@ class TweetManager
         $newTweet->save();
     }
 
-    public function exists($uid)
+    public static function exists($uid)
     {
         return ! is_null(Tweet::whereUid($uid)->first());
     }
