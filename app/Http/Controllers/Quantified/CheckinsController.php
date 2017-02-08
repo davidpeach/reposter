@@ -12,6 +12,12 @@ use App\Locations\LocationPersistors\CheckinLocationPersistor;
 
 class CheckinsController extends Controller
 {
+    public function __construct()
+    {
+        Log::info('constricting');
+    }
+
+
     public function index()
     {
         //
