@@ -1,4 +1,5 @@
 <?php
+Route::any('checkin', 'Quantified\CheckinsController@store');
 
 Route::group(['middleware' => 'auth'], function () {
 
@@ -59,4 +60,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-Route::any('checkin', 'Quantified\CheckinsController@store');
