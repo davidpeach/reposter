@@ -48,7 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
-Route::post('checkin', 'Quantified\CheckinsController@store');
+Route::any('checkin', 'Quantified\CheckinsController@store');
 
 Auth::routes();
 
