@@ -50,9 +50,9 @@
 
 // // Route::any('checkin', 'Quantified\CheckinsController@store');
 
-// Route::get('callback/foursquare', function () {
-//     return request()->all();
-// });
+Route::get('callback/foursquare', function () {
+    return request()->all();
+});
 
 // Auth::routes();
 
