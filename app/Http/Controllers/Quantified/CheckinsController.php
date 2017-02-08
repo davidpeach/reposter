@@ -19,6 +19,7 @@ class CheckinsController extends Controller
 
     public function store(Request $request)
     {
+        Log::info('first');
         if ( ! $request->has('secret') || $request->get('secret') !== env('FOURSQUARE_SECRET')) {
             abort(401);
         }
