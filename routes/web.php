@@ -58,4 +58,4 @@
 
 // Route::get('/home', 'HomeController@index');
 
-Route::any('checkin', 'Quantified\CheckinsController@store');
+Route::post('checkin', 'Quantified\CheckinsController@store');
