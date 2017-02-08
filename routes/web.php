@@ -1,5 +1,5 @@
 <?php
-
+Log::info('Route file');
 // Route::group(['middleware' => 'auth'], function () {
 
 //     Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
