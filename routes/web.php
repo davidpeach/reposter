@@ -59,6 +59,6 @@ Route::get('callback/foursquare', function () {
 // Route::get('/home', 'HomeController@index');
 
 //Route::post('checkin', 'Quantified\CheckinsController@store');
-Route::post('checkin', function(){
+Route::any('checkin', function(){
     Log::info('made it');
 });
