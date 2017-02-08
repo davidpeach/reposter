@@ -48,7 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
-Route::any('checkin', 'Quantified\CheckinsController@store');
+// Route::any('checkin', 'Quantified\CheckinsController@store');
 
 Route::get('callback/foursquare', function () {
     return request()->all();
@@ -57,3 +57,6 @@ Route::get('callback/foursquare', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::any('checkin', 'Quantified\CheckinsController@store');
