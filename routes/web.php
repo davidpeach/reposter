@@ -1,5 +1,7 @@
 <?php
 
+Log::info(request()->all());
+
 Route::any('checkin', 'Quantified\CheckinsController@store');
 
 Route::group(['middleware' => 'auth'], function () {
