@@ -1,5 +1,4 @@
 <?php
-
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
@@ -59,3 +58,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::any('checkin', 'Quantified\CheckinsController@store');
+
+Route::group(['domain' => 'notes.davidpeach.co.uk'], function () {
+
+    Route::get('/', 'Front\NotesController@index');
+
+});
