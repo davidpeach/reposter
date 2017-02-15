@@ -6,6 +6,10 @@
 
     <p><a href="https://davidpeach.co.uk">Go to my main website</a></p>
 
+    <nav>
+        {!! $notes->render() !!}
+    </nav>
+
     @foreach($notes as $note)
 
         <article class="note">
