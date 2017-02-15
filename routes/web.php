@@ -1,5 +1,5 @@
 <?php
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
 
@@ -28,10 +28,6 @@ Route::group(['middleware' => 'auth'], function () {
             return redirect()->route('posts.create');
         });
 
-    });
-
-    Route::get('/', function () {
-        return view('dashboard');
     });
 
     Route::get('mailtest', function () {
