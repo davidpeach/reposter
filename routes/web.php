@@ -1,6 +1,10 @@
 <?php
 Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'], function () {
 
+    Route::get('/', function () {
+        return view('dashboard');
+    });
+
     Route::group(['prefix' => 'quantified', 'namespace' => 'Quantified'], function () {
 
         Route::get('/', function() {
