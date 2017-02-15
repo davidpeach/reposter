@@ -4,6 +4,7 @@ namespace App\Tweets;
 
 use App\Tweets;
 use Carbon\Carbon;
+use App\Tweets\TweetContext;
 use App\Http\Presenters\NotesPresenter;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +15,11 @@ class Tweet extends Model
     ];
 
     protected $dates = ['timestamp'];
+
+    public function context()
+    {
+        return $this->belongsTo(TweetContext::class);
+    }
 
     public function setPublishedAtAttribute($date)
     {

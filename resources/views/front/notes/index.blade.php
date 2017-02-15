@@ -14,6 +14,10 @@
 
         <article class="note">
             {!! $note->present()->content !!}
+            <footer>
+                {!! $note->present()->external_link !!}
+                {!! $note->present()->timestamp !!}
+            </footer>
         </article>
 
     @endforeach

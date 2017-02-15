@@ -10,5 +10,14 @@ body {
 }
 
 .note {
-    padding: 1em 0;
+    border-bottom: 1px solid rgba(black, .4);
+    padding: 2em 0;
+}
+footer {
+    font-size: .75em;
+    text-align: right;
+}
+
+time {
+    cursor: help;
 }
