@@ -59,8 +59,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::any('checkin', 'Quantified\CheckinsController@store');
 
-//Route::group(['domain' => 'notes.davidpeach.co.uk'], function () {
+Route::group(['domain' => 'notes.davidpeach.co.uk'], function () {
 
     Route::get('/', 'Front\NotesController@index');
 
-//});
+});
