@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="box box-success">
-                <form action="{{ route('posts.update') }}" method="POST" class="box-body">
+                <form action="{{ route('posts.update', [$post->id]) }}" method="POST" class="box-body">
 
                     {!! csrf_field() !!}
 
