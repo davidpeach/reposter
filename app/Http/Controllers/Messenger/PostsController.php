@@ -84,7 +84,7 @@ class PostsController extends Controller
 
         $post->update($request->all());
 
-        return redirect()->route('posts.show');
+        return redirect()->route('posts.show', [$post->id]);
     }
 
     /**
