@@ -28,6 +28,7 @@
                     <th>URL</th>
                     <th>Published At</th>
                     <th>Upcoming Schedule</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,7 @@
                     <td>{{ $post->url }}</td>
                     <td>{{ $post->published_at }}</td>
                     <td><a href="{{ route('posts.messages.index', $post->id) }}">{{ $post->unsentMessages()->count() }} / {{ $post->messages()->count() }}</a></td>
+                    <td><a href="{{ route('posts.edit', [$post->id]) }}">Edit</a></td>
                 </tr>
                 @endforeach
             </tbody>
