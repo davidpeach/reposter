@@ -8,7 +8,7 @@ Route::group(['domain' => env('DOMAIN_ROOT', 'localhost')], function () {
 
 Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'], function () {
 
-    Route::get('dashboard', function () {
+    Route::get('/', function () {
         return view('dashboard');
     });
 
