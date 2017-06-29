@@ -3,6 +3,8 @@ Route::group(['domain' => env('DOMAIN_ROOT', 'localhost')], function () {
 
     Route::get('/', 'HomeController@index');
 
+    include(__DIR__ . "/temp-301s.php");
+
 });
 
 
@@ -71,3 +73,5 @@ Route::group(['domain' => 'notes.davidpeach.co.uk'], function () {
     Route::get('/', 'Front\NotesController@index');
 
 });
+
+
