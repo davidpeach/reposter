@@ -1,115 +1,115 @@
 <?php
 	// Chegalabonga
-	Route::get(2014/01/first-taste-manga, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2014/01/first-taste-manga, 301); 	
+	Route::get('2014/01/first-taste-manga', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2014/01/first-taste-manga', 301); 	
 	});
 	
-	Route::get(2016/07/deeper-appreciation-music, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/07/deeper-appreciation-music, 301); 	
+	Route::get('2016/07/deeper-appreciation-music', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/07/deeper-appreciation-music', 301); 	
 	});
 	
-	Route::get(2016/07/the-new-thirty-three, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/07/the-new-thirty-three, 301); 	
+	Route::get('2016/07/the-new-thirty-three', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/07/the-new-thirty-three', 301); 	
 	});
 	
-	Route::get(2016/07/goodbye-windows-its-been-nice, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/07/goodbye-windows-its-been-nice, 301); 	
+	Route::get('2016/07/goodbye-windows-its-been-nice', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/07/goodbye-windows-its-been-nice', 301); 	
 	});
 	
-	Route::get(2016/07/whos-that-knocking-at-the-windows, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/07/whos-that-knocking-at-the-windows, 301); 	
+	Route::get('2016/07/whos-that-knocking-at-the-windows', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/07/whos-that-knocking-at-the-windows', 301); 	
 	});
 	
-	Route::get(2016/07/half-marathon-training-starts-week, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/07/half-marathon-training-starts-week, 301); 	
+	Route::get('2016/07/half-marathon-training-starts-week', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/07/half-marathon-training-starts-week', 301); 	
 	});
 	
-	Route::get(2016/08/started-watching-stranger-things, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/08/started-watching-stranger-things, 301); 	
+	Route::get('2016/08/started-watching-stranger-things', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/08/started-watching-stranger-things', 301); 	
 	});
 	
-	Route::get(2016/08/on-the-train-again, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/08/on-the-train-again, 301); 	
+	Route::get('2016/08/on-the-train-again', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/08/on-the-train-again', 301); 	
 	});
 	
-	Route::get(2016/08/i-just-made-first-penny-google-adsense, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/08/i-just-made-first-penny-google-adsense, 301); 	
+	Route::get('2016/08/i-just-made-first-penny-google-adsense', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/08/i-just-made-first-penny-google-adsense', 301); 	
 	});
 	
-	Route::get(2016/08/worlds-greatest-juggling-otter, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/08/worlds-greatest-juggling-otter, 301); 	
+	Route::get('2016/08/worlds-greatest-juggling-otter', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/08/worlds-greatest-juggling-otter', 301); 	
 	});
 	
-	Route::get(2016/08/taste-music-grown-years, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/08/taste-music-grown-years, 301); 	
+	Route::get('2016/08/taste-music-grown-years', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/08/taste-music-grown-years', 301); 	
 	});
 	
-	Route::get(2016/09/i-need-start-setting-goals, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/09/i-need-start-setting-goals, 301); 	
+	Route::get('2016/09/i-need-start-setting-goals', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/09/i-need-start-setting-goals', 301); 	
 	});
 	
-	Route::get(2016/10/day-out-at-sea-life-centre-birmingham, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/10/day-out-at-sea-life-centre-birmingham, 301); 	
+	Route::get('2016/10/day-out-at-sea-life-centre-birmingham', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/10/day-out-at-sea-life-centre-birmingham', 301); 	
 	});
 	
-	Route::get(2016/12/make-pinhead-hellraiser-pumpkin, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/12/make-pinhead-hellraiser-pumpkin, 301); 	
+	Route::get('2016/12/make-pinhead-hellraiser-pumpkin', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/12/make-pinhead-hellraiser-pumpkin', 301); 	
 	});
 	
-	Route::get(2016/12/never-ending-chambers-illusion, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2016/12/never-ending-chambers-illusion, 301); 	
+	Route::get('2016/12/never-ending-chambers-illusion', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2016/12/never-ending-chambers-illusion', 301); 	
 	});
 	
-	Route::get(2017/02/name-david-i-addicted-caffeine, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/02/name-david-i-addicted-caffeine, 301); 	
+	Route::get('2017/02/name-david-i-addicted-caffeine', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/02/name-david-i-addicted-caffeine', 301); 	
 	});
 	
-	Route::get(2017/02/tomie-by-junji-ito-added-to-my-collection, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/02/tomie-by-junji-ito-added-to-my-collection, 301); 	
+	Route::get('2017/02/tomie-by-junji-ito-added-to-my-collection', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/02/tomie-by-junji-ito-added-to-my-collection', 301); 	
 	});
 	
-	Route::get(2017/02/junji-ito-collection-increases-to-3, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/02/junji-ito-collection-increases-to-3, 301); 	
+	Route::get('2017/02/junji-ito-collection-increases-to-3', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/02/junji-ito-collection-increases-to-3', 301); 	
 	});
 	
-	Route::get(2017/04/lovely-belated-mothers-day-outing, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/lovely-belated-mothers-day-outing, 301); 	
+	Route::get('2017/04/lovely-belated-mothers-day-outing', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/lovely-belated-mothers-day-outing', 301); 	
 	});
 	
-	Route::get(2017/04/no-hay-scofield-no-scofield, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/no-hay-scofield-no-scofield, 301); 	
+	Route::get('2017/04/no-hay-scofield-no-scofield', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/no-hay-scofield-no-scofield', 301); 	
 	});
 	
-	Route::get(2017/04/cat-cursed-face, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/cat-cursed-face, 301); 	
+	Route::get('2017/04/cat-cursed-face', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/cat-cursed-face', 301); 	
 	});
 	
-	Route::get(2017/04/a-day-in-the-sun-and-a-hamster-in-transit, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/a-day-in-the-sun-and-a-hamster-in-transit, 301); 	
+	Route::get('2017/04/a-day-in-the-sun-and-a-hamster-in-transit', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/a-day-in-the-sun-and-a-hamster-in-transit', 301); 	
 	});
 	
-	Route::get(2017/04/a-quarrel-of-rooks-and-first-world-war-pigeons, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/a-quarrel-of-rooks-and-first-world-war-pigeons, 301); 	
+	Route::get('2017/04/a-quarrel-of-rooks-and-first-world-war-pigeons', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/a-quarrel-of-rooks-and-first-world-war-pigeons', 301); 	
 	});
 	
-	Route::get(2017/04/stretching-before-running, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/stretching-before-running, 301); 	
+	Route::get('2017/04/stretching-before-running', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/stretching-before-running', 301); 	
 	});
 	
-	Route::get(2017/04/achy-thighs-and-inappropriate-gym-clothes, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/achy-thighs-and-inappropriate-gym-clothes, 301); 	
+	Route::get('2017/04/achy-thighs-and-inappropriate-gym-clothes', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/achy-thighs-and-inappropriate-gym-clothes', 301); 	
 	});
 	
-	Route::get(2017/04/productivity-and-breaking-out-of-prison, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/productivity-and-breaking-out-of-prison, 301); 	
+	Route::get('2017/04/productivity-and-breaking-out-of-prison', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/productivity-and-breaking-out-of-prison', 301); 	
 	});
 	
-	Route::get(2017/04/blaming-others-youre-feeling, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/blaming-others-youre-feeling, 301); 	
+	Route::get('2017/04/blaming-others-youre-feeling', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/blaming-others-youre-feeling', 301); 	
 	});
 	
-	Route::get(2017/04/searching-perfect-side-project, function(){     
-    	return Redirect::to('https://chegalabonga.com/' . 2017/04/searching-perfect-side-project, 301); 	
+	Route::get('2017/04/searching-perfect-side-project', function(){     
+    	return Redirect::to('https://chegalabonga.com/' . '2017/04/searching-perfect-side-project', 301); 	
 	});
 
 
