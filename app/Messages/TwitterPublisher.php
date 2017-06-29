@@ -33,7 +33,7 @@ class TwitterPublisher
         $tweet = Tweet::orderBy('timestamp', 'desc')->first();
 
         $request = [
-            'screen_name' => '_davidpeach',
+            'screen_name' => 'chegalabonga',
             'count' => '2000',
             'include_rts' => 'true',
             'exclude_replies' => 'false'
