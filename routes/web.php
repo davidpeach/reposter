@@ -1,7 +1,14 @@
 <?php
+Route::group(['domain' => env('DOMAIN_ROOT', 'localhost')], function () {
+
+    Route::get('/', 'HomeController@index');
+
+});
+
+
 Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'], function () {
 
-    Route::get('/', function () {
+    Route::get('dashboard', function () {
         return view('dashboard');
     });
 
@@ -55,7 +62,7 @@ Route::get('callback/foursquare', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+
 
 Route::any('checkin', 'Quantified\CheckinsController@store');
 
