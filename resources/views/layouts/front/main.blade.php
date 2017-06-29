@@ -18,57 +18,22 @@
     <div id="app">
 
         <div class="container">
+
+            <div class="notification is-warning">
+                <p>My websites are currently in a state of minor flux. This is my new landing page, which links out to my online projects.</p>
+                <p>Old posts have been moved between my two blogs.</p>
+                <p><strong>This page is currently being built and as such may currently appear unfinished</strong>.</p>
+            </div>
+
             <div class="section">
                 <div class="columns">
                     <div class="column">
-                        <div class="card">
-                          {{-- <div class="card-image">
-                            <figure class="image is-4by3">
-                              <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
-                            </figure>
-                          </div> --}}
-                          <div class="card-content">
-                            <div class="media">
-                              <div class="media-left">
-                                <figure class="image is-48x48">
-                                  <img src="https://placecage.com/75/75" alt="Image">
-                                </figure>
-                              </div>
-                              <div class="media-content">
-                                <p class="title is-4">David Peach</p>
-                                <p class="subtitle is-6">Writer | Web Developer | Bedroom grime artist</p>
-                              </div>
-                            </div>
-
-                            <div class="content">
-                                <p>Welcome to my personal website. From here you can find links to everything I have online.</p>
-                                <p>I am a Web Developer by trade - working primarily in PHP, but also spend a lot of time writing on one of my own blogs.</p>
-                            </div>
-                          </div>
-                        </div>
+                        <h1 class="title is-1">David Peach</h1>
+                        <p>Welcome to my website. My online projects can by reached below. Thanks for visiting.</p>
                     </div>
                 </div><!-- .columns -->
             </div>
         </div>
-
-        {{-- <div class="container">
-            <nav class="nav">
-                <div class="nav-left">
-                    <a class="nav-item">
-                        David Peach
-                    </a>
-                    <a class="nav-item" href="/">
-                        Home
-                    </a>
-
-                    <a class="nav-item" href="https://chegalabonga.com">
-                        Blog
-                    </a>
-                </div>
-                
-            </nav>
-        </div> --}}
-
 
         <main class="container">
 
@@ -77,6 +42,12 @@
         </main>
 
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Thank you for stopping by.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

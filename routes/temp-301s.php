@@ -205,3 +205,7 @@
 	Route::get('2016/07/the-new-ghostbusters-film-wasnt-terrible', function () {
 		return Redirect::to('https://newthirtythree.com/2016/07/the-new-ghostbusters-film-wasnt-terrible', 301);
 	});
+
+
+// 	Sudo Password: 6UEkZYj72fVCLal1II2c
+// Database Password: ll3fslbxgJwslTkINWX8
