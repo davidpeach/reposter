@@ -9,6 +9,9 @@ Route::group(['domain' => env('DOMAIN_ROOT', 'localhost')], function () {
 
 });
 
+Route::group(['domain' => 'messenger.davidpeach.co.uk'], function () {
+    Route::any('checkin', 'Quantified\CheckinsController@store');
+});
 
 Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'], function () {
 
@@ -30,7 +33,7 @@ Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'],
 
 
     Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {
-
+        
         Route::resource('posts', 'PostsController');
 
         Route::resource('messages', 'MessagesController');
