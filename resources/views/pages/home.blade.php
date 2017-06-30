@@ -93,6 +93,16 @@
         <p>Changelogs will soon be on their own page</p>        
     </div>
 
+	<h3 class="title is-3">June 30th, 2017</h3>
+
+	<h4 class="title is-4">davidpeach.co.uk</h4>
+
+	<div class="content">
+		<ul>
+			<li>New page added: <a href="/tweets">/tweets</a></li>
+		</ul>
+	</div>
+
 	<h3 class="title is-3">June 29th, 2017</h3>
 	
 	<h4 class="title is-4">davidpeach.co.uk</h4>
