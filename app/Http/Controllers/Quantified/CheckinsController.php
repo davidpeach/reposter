@@ -25,11 +25,10 @@ class CheckinsController extends Controller
 
     public function store(Request $request)
     {
-        return $request->all();
         if ( ! $request->has('secret') || $request->get('secret') !== env('FOURSQUARE_SECRET')) {
             abort(401);
         }
-        
+        return 'here';
         $data = json_decode($request->get('checkin'));
         Log::info($data);
         $venue = $data->venue;
