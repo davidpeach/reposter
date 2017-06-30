@@ -29,6 +29,8 @@ Route::group(['domain' => 'messenger.davidpeach.co.uk', 'middleware' => 'auth'],
 
     Route::group(['prefix' => 'messenger', 'namespace' => 'Messenger'], function () {
 
+        Route::any('checkin', 'Quantified\CheckinsController@store');
+        
         Route::resource('posts', 'PostsController');
 
         Route::resource('messages', 'MessagesController');
