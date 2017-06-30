@@ -5,6 +5,8 @@ Route::group(['domain' => env('DOMAIN_ROOT', 'localhost')], function () {
 
     include(__DIR__ . "/temp-301s.php");
 
+    Route::get('tweets', 'Front\NotesController@index');
+
 });
 
 

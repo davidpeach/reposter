@@ -47,7 +47,7 @@
 				    </div>
 
 				    <div class="content">
-				     	<p>Independent Entertainment Blog. </p>
+				     	<p><strong>Independent Entertainment Blog</strong></p>
 				     	<p>Album, E.P. and song reviews; Artist interviews; Live venue write-ups.</p>
 				    </div>
 			  	</div>
@@ -75,7 +75,7 @@
 				    </div>
 
 				    <div class="content">
-				     	<p>My personal blog</p>
+				     	<p><strong>My personal blog</strong></p>
 				     	<p>My own thoughts and opinions with no particular focus on specific topics.</p>
 				    </div>
 			  	</div>
