@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/app.css">
-        <meta name="google-site-verification" content="xnMiSlceNBtxCm5qO6XWMYZgeWI28aeIPQ8JtkA6L00" />
+        
         <title>Reposter</title>
     </head>
     <body>
