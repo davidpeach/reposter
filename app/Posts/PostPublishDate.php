@@ -22,7 +22,7 @@ class PostPublishDate
 
         $slug = array_pop($explodedUrl);
 
-        return Carbon::createFromFormat('Y-m-d', implode('-', $explodedUrl));
+        return Carbon::createFromFormat('Y-m', implode('-', $explodedUrl));
     }
 
 }
